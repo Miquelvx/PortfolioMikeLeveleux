@@ -1,0 +1,67 @@
+html {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #0f172a, #111827);
+}
+
+.nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: max-content;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px;
+    background: #000000;
+    border: #202020 1px solid;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.nav-item {
+    display: flex;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 50px;
+    color: #fff;
+    border: #42424200 1px solid;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    border: #424242 1px solid;
+    background: rgba(255,255,255,0.08);
+}
+
+.nav-item.active {
+    border: #424242 1px solid;
+    background: rgba(255,255,255,0.12);
+}
+
+.icon-nav {
+    width: 14px;
+    height: 14px;
+}
+
+.text-nav {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.separator {
+  width: 1px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 600px) {
+    .text-nav {
+        display: none;
+    }
+}
