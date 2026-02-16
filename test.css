@@ -1,11 +1,15 @@
+/* Style CSS pour le module HTML */
 html {
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* Style CSS pour le module body */
 body {
-    background: linear-gradient(to bottom, #0f172a, #111827);
+    background: #000000;
+    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgb(2, 2, 43) 100%);
 }
 
+/* Style CSS pour la barre de navigation */
 .nav {
     position: fixed;
     top: 20px;
@@ -60,8 +64,82 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
+/* Style CSS pour le footer */
+.footer {
+    position: fixed;
+    width: max-content;
+    max-width: 90%;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 400px;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-item {
+    position: relative;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.footer-item:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.footer-item::after {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    background: #000;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+.footer-item:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.text-footer {
+    font-size: 14px;
+    color: #fff;
+}
+
+.footer-prefix {
+    opacity: 0.7;
+}
+
+.icon-footer {
+    width: 20px;
+    height: 20px;
+}
+
 @media (max-width: 600px) {
     .text-nav {
         display: none;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 10px;
     }
 }
