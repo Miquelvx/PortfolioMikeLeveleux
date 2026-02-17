@@ -6,7 +6,7 @@ html {
 /* Style CSS pour le module body */
 body {
     background: #000000;
-    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgb(2, 2, 43) 100%);
+    background: radial-gradient(circle, #000000 0%, #02022b 100%);
 }
 
 /* Style CSS pour la barre de navigation */
