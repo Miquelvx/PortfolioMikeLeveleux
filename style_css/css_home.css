@@ -78,6 +78,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 400px;
+    padding: 6px;
 }
 
 .footer-icons {
@@ -251,9 +252,9 @@ body {
 .f1-car {
     position: absolute;
     color: #ffffff;
-    width: 200px; /* Taille de la voiture */
+    width: 100px; /* Taille de la voiture */
     left: -150px; /* Départ hors écran à gauche */
-    opacity: 0.6; /* Légère transparence pour ne pas gêner la lecture */
+    opacity: 0.8; /* Légère transparence pour ne pas gêner la lecture */
 }
 
 @keyframes drive-right {
