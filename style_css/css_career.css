@@ -1,0 +1,217 @@
+/* Styles CSS général pour la timeline */
+.section-pro {
+    padding: 100px 0 100px 0;
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.titre-career {
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.description-career {
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    max-width: 1000px;
+    margin: 50px auto 100px auto;
+    line-height: 1.5;
+}
+
+/* Ligne verticale centrale */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 2px;
+}
+
+/* Conteneur des expériences (gauche ou droite) */
+.timeline-box {
+    padding: 10px 40px;
+    position: relative;
+    background-color: transparent;
+    max-width: max-content;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+/* Cercles sur la timeline */
+.timeline-box::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: -10px;
+    background-color: #000;
+    border: 3px solid #fff;
+    top: 22px;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.timeline-box:hover::after {
+    background-color: #fff;
+    transform: scale(1.2);
+}
+
+/* Positionnement Gauche */
+.left { right: 20%; }
+
+/* Positionnement Droite */
+.right { left: 50%; }
+
+/* Correction position cercle pour la droite */
+.right::after { left: -10px; }
+
+/* Style CSS pour le contenu d'expérience */
+.content {
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.05);
+    position: relative;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.content:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.content .poste { 
+    color: #fff; 
+    margin: 0; 
+    font-size: 22px; 
+}
+
+.content .entreprise { 
+    color: #1dc3ff; 
+    margin: 0; 
+    font-size: 16px; 
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.content .date { 
+    color: #ffffff; 
+    font-size: 10px; 
+    font-weight: 600; 
+    margin-top: 5px;
+    margin-bottom: 5px; 
+    display: block; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    text-align: right; 
+    opacity: 0.6;
+}
+
+.content p { 
+    color: #d0d0d0; 
+    font-size: 14px; 
+    line-height: 1.6; 
+    margin: 0; 
+    margin-top: 20px;
+
+}
+.content ul { 
+    color: #d0d0d0; 
+    font-size: 12px; 
+    line-height: 1.6; 
+    margin: 0; 
+    padding-left: 30px;
+}
+
+/* Style CSS pour les tags de compétences */
+.skills-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.skill-tag {
+    background: rgba(29, 195, 255, 0.1);
+    border: 1px solid rgba(29, 195, 255, 0.3);
+    color: #1dc3ff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: rgba(29, 195, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(29, 195, 255, 0.2);
+}
+
+/* Styles CSS pour gérer la responsivité */
+@media (max-width: 1400px) {
+    .description-career{
+        max-width: 80%;
+        margin-bottom: 5%;
+    }
+    .timeline-box {
+        width: 45%;
+    }
+    .left {
+        right: -5%;
+    }
+    .right {
+        left: 50%;
+    }
+    .content p {
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .section-pro {
+        padding-top: 100px;
+    }
+    .description-career{
+        margin-bottom: 10%;
+    }
+    .timeline::after {
+        display: none;
+    }
+    .timeline-box { 
+        width: 80%;  
+        padding: 0;
+        margin: 0 auto 15px auto;
+        max-width: none;
+    }
+    .timeline-box::after { 
+        display: none; 
+    }
+    .left { 
+        right: auto; 
+    }
+    .right { 
+        left: auto; 
+    }
+}
