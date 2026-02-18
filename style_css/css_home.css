@@ -26,6 +26,7 @@ body {
     border: #202020 1px solid;
     border-radius: 50px;
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
 }
 
 .nav-item {
