@@ -1,0 +1,356 @@
+/* Style CSS pour le module HTML */
+html {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Style CSS pour le module body */
+body {
+    background: #000000;
+    background: radial-gradient(circle, #000000 0%, #02022b 100%);
+}
+
+/* Style CSS pour la barre de navigation */
+.nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: max-content;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px;
+    background: #000000;
+    border: #202020 1px solid;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+}
+
+.nav-item {
+    display: flex;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 50px;
+    color: #fff;
+    border: #42424200 1px solid;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    border: #424242 1px solid;
+    background: rgba(255,255,255,0.08);
+}
+
+.nav-item.active {
+    border: #424242 1px solid;
+    background: rgba(255,255,255,0.12);
+}
+
+.icon-nav {
+    width: 14px;
+    height: 14px;
+}
+
+.text-nav {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.separator {
+  width: 1px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Style CSS pour le footer */
+.footer {
+    position: fixed;
+    width: max-content;
+    max-width: 90%;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 400px;
+    padding: 6px;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-item {
+    position: relative;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.footer-item:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.footer-item::after {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    background: #000;
+    border: 1px solid #333;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+.footer-item:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.text-footer {
+    font-size: 14px;
+    color: #fff;
+}
+
+.footer-prefix {
+    opacity: 0.7;
+}
+
+.icon-footer {
+    width: 20px;
+    height: 20px;
+}
+
+/* Style CSS pour le contenu principal */
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    max-width: 90%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    animation: fadeIn 1.0s ease-out;
+}
+
+.profil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 150px;
+    text-align: left;
+}
+
+.photo-pro {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3d3b3bde;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.titre {
+    font-size: 90px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.sous-titre {
+    text-align: left;
+    font-size: 35px;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+.description {
+    text-align: justify;
+    font-size: 16px;
+    color: #a0a0a0;
+    margin-top: 20px;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.bouton-projets {
+    padding: 10px 25px;
+    border: 1px solid #504f4f;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.05);
+    display: inline-flex;
+    align-items: center;
+}
+
+.bouton-projets:hover {
+    background: #ffffff18;
+    border-color: #ffffffec;
+    opacity: 1;
+}
+
+.bouton-projets::after {
+    content: ">";
+    font-size: 20px;
+    line-height: 14px;
+    opacity: 0;
+    margin-left: -10px;
+    transition: 0.3s;
+}
+
+.bouton-projets:hover::after {
+    opacity: 0.9;
+    margin-left: 10px;
+}
+
+/* Animation d'apparition (Fade in + Blur) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+/* Animation F1 Arrière-plan */
+#f1-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permet de cliquer au travers */
+    z-index: -1; /* Reste derrière le contenu */
+    overflow: hidden;
+}
+
+.f1-car {
+    position: absolute;
+    color: #ffffff;
+    width: 100px; /* Taille de la voiture */
+    left: -150px; /* Départ hors écran à gauche */
+    opacity: 0.8; /* Légère transparence pour ne pas gêner la lecture */
+}
+
+@keyframes drive-right {
+    to { transform: translateX(120vw); } /* Va jusqu'à 120% de la largeur de l'écran */
+}
+
+@keyframes drive-left {
+    from { transform: scaleX(-1); } /* Retourne la voiture */
+    to { transform: translateX(-120vw) scaleX(-1); } /* Va vers la gauche en restant retournée */
+}
+
+/* Styles CSS pour gérer la responsivité */
+@media (max-width: 1153px) {
+    .profil {
+        gap: 50px;
+    }
+
+    .titre {
+        font-size: 60px;
+    }
+    
+    .sous-titre {
+        font-size: 25px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .photo-pro {
+        width: 200px;
+        height: 200px;
+    }
+
+    .bouton-projets {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    .f1-car {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .text-nav {
+        display: none;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: 100px auto;
+        gap: 30px;
+    }
+
+    .profil {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .photo-pro {
+        width: 135px;
+        height: 135px;
+    }
+
+    .titre {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .sous-titre {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .bouton-projets {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+     
+    .f1-car {
+        display: none;
+    }
+}

@@ -3,12 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./style.css">
-        <link rel="icon" href="file/logo.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="./style_css/css_home.css">
+        <link rel="icon" href="files/logo.svg" type="image/svg+xml">
         <title>Accueil</title>
     </head>    
 
     <body>
+        <!-- Conteneur pour l'animation d'arrière-plan -->
+        <div id="f1-container"></div>
+
         <!-- Barre de navigation -->
         <nav class="nav">
         <a href="./home.html" class="nav-item active">
@@ -33,12 +36,25 @@
         </a>
         </nav>
 
+        <!-- Contenu principal de la page -->
+        <main class="main">
+            <div class="profil">
+                <img src="./files/Photo_pro.jpg" alt="Mike Leveleux" class="photo-pro">
+                <div class="main-text">
+                    <h1 class="titre">Mike Leveleux</h1>
+                    <p class="sous-titre">Data Scientist | Data Analyst</p>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                </div>
+            </div>
+            <a href="./pages/project.html" class="bouton-projets">Découvre mes projets</a>
+        </main>     
+
         <!-- Footer de la page -->
         <footer class="footer">
             <span class="text-footer"> <span class="footer-prefix">© 2026 /</span> Mike Leveleux </span>
 
             <div class="footer-icons">
-                <a href="./file/CV_LEVELEUX_Mike_2026.pdf" class="footer-item" aria-label="CV">
+                <a href="./files/CV_LEVELEUX_Mike_2026.pdf" class="footer-item" aria-label="CV">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon-footer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M12 18v-6"/><path d="m9 15 3 3 3-3"/></svg>                
                 </a>
 
@@ -55,5 +71,6 @@
                 </a>
             </div>
         </footer>
+        <script src="./script_js/anim_homepage.js"></script>
     </body>
 </html>
