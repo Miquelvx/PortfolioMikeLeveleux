@@ -1,0 +1,100 @@
+/* Style CSS pour la boite de flou */
+.boite-flou {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px; 
+    z-index: 5;
+    pointer-events: none; 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    mask-image: linear-gradient(to bottom, black 0%, black 20%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 20%, transparent 100%);
+}
+
+.nav-scrolled {
+    z-index: 10; 
+    top: 5px;
+}
+
+/* Style CSS pour la scroll bar de la page */
+::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #02021b; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #201f1f; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #292929;
+}
+
+/* Override du footer pour le mettre en bas de page */
+.footer {
+    position: relative;
+    transform: none;
+    left: auto;
+    bottom: auto;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+/* Styles CSS pour la page Projet */
+.boite-project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0 430px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.titre-project {
+    color: #ffffff;
+    font-size: 50px;
+}
+.sous-titre-project {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+/* Styles CSS pour gérer la responsivité */
+
+/* Pour les écrans de 1400px et moins */
+@media (max-width: 1500px) { 
+
+}
+
+@media (max-width: 1150px) { 
+
+}
+
+@media (max-width: 900px) { 
+
+}
+
+@media (max-width: 770px) {
+    .footer {
+        gap : 300px;
+    }
+}
+
+@media (max-width: 430px){
+    .titre-project {
+        font-size: 30px;
+    }
+    .sous-titre-project {
+        font-size: 20px;
+    }
+    .footer {
+        gap : 40px;
+    }
+}
