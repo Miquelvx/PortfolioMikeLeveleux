@@ -1,0 +1,572 @@
+/* Style CSS pour la boite de flou */
+.boite-flou {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px; 
+    z-index: 5;
+    pointer-events: none; 
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    mask-image: linear-gradient(to bottom, black 0%, black 20%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 0%, black 20%, transparent 100%);
+}
+
+.nav-scrolled {
+    z-index: 10; 
+    top: 5px;
+}
+
+/* Style CSS pour la scroll bar de la page */
+::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #02021b; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #201f1f; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #292929;
+}
+
+/* Override du footer pour le mettre en bas de page */
+.footer {
+    position: relative;
+    transform: none;
+    left: auto;
+    bottom: auto;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.boite-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0 60px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.boite-titre-photo {
+    display: flex;
+    max-width: max-content;
+    width: 100%;
+    gap: 220px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.titre {
+    color: #ffffff;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.photo-pro {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3d3b3bde;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.boite-bouton {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 210px;
+}
+
+.bouton-liens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bouton-lien {
+    display: inline-flex;
+    align-items: center;
+    background: #000000;
+    border: #202020 1px solid;
+    border-radius: 30px;
+    
+    /* On réduit encore le padding vertical à 0 */
+    padding: 4px 12px; 
+    gap: 5px;
+    
+    /* On force une hauteur fixe très petite */
+    height: 20px; 
+    
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 1; /* Très important pour supprimer l'espace du texte */
+    
+    transition: all 0.2s ease-in-out;
+}
+
+.bouton-lien:hover {
+    border: #424242 1px solid;
+    background: #ffffff14;
+}
+
+.icon-bouton {
+    display: block;
+    height: 22px; /* L'icône doit être petite pour ne pas pousser les bords */
+    width: auto;
+    /* On s'assure qu'aucune marge ne traîne */
+    margin: 0;
+}
+
+.boite-lieu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap : 5px; 
+}
+
+.langues {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.boite-langue {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-langue {
+    width: 20px;
+    height: 20px;
+    color: #b83d3d;
+    margin-right: 5px;
+}
+
+.langue {
+    padding: 4px 14px;
+    border-radius: 10px;
+    background: #000000;
+    border: #202020 1px solid;
+    opacity: 0.8;
+}
+
+.texte-about {
+    margin-top: 50px;
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    width: 80%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.certifs {
+    display: flex;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 45%;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    border-radius: 20px;
+    border: #2b2b2b 1px solid;
+}
+
+.diplome {
+    display: flex;
+    width: 18%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+
+    background: #9c0202;
+    background: linear-gradient(340deg,rgba(156, 2, 2, 1) 0%, rgba(121, 0, 201, 1) 30%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 10px;
+    border: #202020 1px solid;
+}
+
+.diplome:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 18px rgba(255, 255, 255, 0.6);
+}
+
+.diplome a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.icon-diplome {
+    width: 40px;
+    height: 40px;
+}
+
+.skills {   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    gap: 20px;
+}
+
+.titre-skills {
+    background: linear-gradient(340deg,rgba(156, 2, 2, 1) 0%, rgba(121, 0, 201, 1) 30%, rgba(0, 212, 255, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.langage-prog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 60%;
+    gap: 20px;
+
+    border: #2b2b2b 1px solid;
+    border-radius: 10px;
+    background: linear-gradient(340deg,rgba(156, 2, 2, 1) 0%, rgba(121, 0, 201, 1) 30%, rgba(0, 212, 255, 1) 100%);
+}
+
+.boite-langages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.titre-langage {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase
+}
+
+.boite-langage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 13%;
+    gap: 15px;
+
+    padding: 20px 0;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+
+    border: #ffffffd7 1px solid;
+    border-radius: 10px;
+    background: #202020;
+}
+
+.icon-prog {
+    width: 40px;
+    height: 40px;
+
+}
+
+.séparation-skills {
+    width: 100%;
+    height: 1px;
+    padding: 20px 0;
+}
+
+.data-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px 0 30px 0;
+    width: 60%;
+    gap: 20px;
+
+    border: #535353 1px solid;
+    border-radius: 10px;
+    background: #202020;
+}
+
+.titre-data {  
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase
+}
+
+.boite-datas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.boite-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    gap: 10px;
+
+    padding: 10px 0;
+
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+
+    border: 1px solid transparent;
+    border-radius: 30px;
+    background: linear-gradient(#000, #000) padding-box,
+                linear-gradient(340deg,rgba(156, 2, 2, 1) 0%, rgba(121, 0, 201, 1) 30%, rgba(0, 212, 255, 1) 100%) border-box;
+}
+
+.icon-data {
+    width: 20px;
+    height: 20px;
+}   
+
+/* Styles CSS pour gérer la responsivité */
+
+/* Pour les écrans de 1400px et moins */
+@media (max-width: 1500px) { 
+    .certifs {
+        width: 60%;
+    }
+    .langage-prog {
+        width: 80%;
+    }
+    .boite-langage {
+        width: 14%;
+    }
+    .data-skills {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1150px) { 
+    .certifs {
+        width: 80%;
+    }
+    .diplome { 
+        font-size: 12px;
+    }
+    .icon-prog {
+        width: 30px;
+        height: 30px;
+    }
+    .boite-langage {
+        font-size: 12px;
+    }
+    .boite-datas {
+        gap: 12px;
+        width: 95%;
+    }
+    .boite-data { 
+        flex-direction: column;
+        padding: 6px 10px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 900px) { 
+    .boite-titre-photo {
+        gap: 160px;
+    }
+    .boite-bouton {
+        gap: 150px; 
+    }
+    .certifs {
+        width: 70%;
+        gap: 30px;
+    }
+    .diplome {
+        width: 18%;
+        font-size: 10px;
+    }
+    .icon-diplome {
+        width: 30px;
+        height: 30px;
+    }
+    .skills {
+        margin-top: 60px;
+    }
+    .icon-prog {
+        width: 20px;
+        height: 20px;
+    }
+    .boite-langages {
+        gap: 15px;
+    }
+    .boite-langage {
+        font-size: 10px;
+        padding: 10px 0;
+    }
+    .data-skills {
+        gap: 10px;
+    }
+    .boite-datas {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 770px) {
+    .boite-titre-photo {
+        gap: 120px;
+    }
+    .boite-bouton {
+        gap: 110px; 
+    }
+    .boite-about {
+        padding: 130px 0 50px 0;
+    
+    }
+    .certifs {
+        gap: 20px;
+    }
+    .diplome {
+        font-size: 8px;
+        font-weight: 500;
+    }
+    .skills {
+        margin-top: 40px;
+    }
+    .boite-langages {
+        gap: 12px;
+    }
+    .boite-langage {
+        font-size: 8px;
+    }
+    .séparation-skills {
+        padding: 10px 0;
+    }
+    .data-skills{
+        padding: 10px 0 15px 0;
+    }
+    .boite-data {
+        font-size: 8px;
+    }
+    .icon-data {
+        width: 15px;
+        height: 15px;
+    }
+    .footer {
+        gap : 300px;
+    }
+}
+
+@media (max-width: 430px) {
+    .boite-titre-photo {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+    .titre {
+        font-size: 40px;
+    }
+    .boite-bouton {
+        gap: 30px;
+    }
+    .bouton-lien {
+        font-size: 12px;
+    }
+    .icon-bouton {
+        height: 15px;
+    }
+    .langues {
+        font-size: 12px;
+    }
+    .icon-langue {
+        width: 15px;
+        height: 15px;
+    }
+    .texte-about {
+        margin-top: 30px;
+    }
+    .certifs {
+        flex-wrap: wrap;
+        width: 70%;
+        gap: 20px 30px;
+        padding: 15px 0;
+    }
+    .diplome{
+        width: 30%;
+        gap: 5px;
+    }
+    .titre-skills {
+        font-size: 25px;
+    }
+    .langage-prog {
+        padding: 10px 0;
+        gap: 0;
+    }
+    .titre-langage {
+        font-size: 12px;
+    }
+    .boite-langages {
+        flex-wrap: wrap;
+        padding: 20px 30px;
+    }
+    .boite-langage {
+        width: 25%;
+        font-size: 9px;
+    }
+    .skills {
+        margin-bottom: 60px;
+    }
+    .séparation-skills {
+        padding: 0;
+    }
+    .titre-data {
+        font-size: 12px;
+    }
+    .boite-data {
+        width: 20%;
+        font-size: 9px;
+    }
+    .footer {
+        gap : 40px;
+    }
+}

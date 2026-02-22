@@ -219,19 +219,19 @@
 }
 
 /* Styles CSS pour gérer la responsivité */
-@media (max-width: 1400px) {
+@media (max-width: 1500px) {
     .footer {
-        gap: 100px;
+        gap: 400px;
     }
-    .description-career{
+    .description-career {
         max-width: 80%;
         margin-bottom: 5%;
     }
     .timeline-box {
-        width: 45%;
+        width: 65%;
     }
     .left {
-        right: -5%;
+        right: 15%;
     }
     .right {
         left: 50%;
@@ -241,24 +241,28 @@
     }
 }
 
-@media screen and (max-width: 770px) {
-    .section-pro {
-        padding-top: 100px;
+@media (max-width: 1150px) {
+    .timeline-box {
+        width: 50%;
     }
-    .description-career{
-        margin-bottom: 10%;
+    .left {
+        right: 0%;
     }
+}
+
+@media (max-width: 900px) {
     .timeline::after {
         display: none;
     }
-    .timeline-box { 
-        width: 80%;  
-        padding: 0;
-        margin: 0 auto 15px auto;
-        max-width: none;
-    }
     .timeline-box::after { 
         display: none; 
+    }
+    .timeline {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
     }
     .left { 
         right: auto; 
@@ -266,7 +270,69 @@
     .right { 
         left: auto; 
     }
-    .footer {
-        gap: 30px;
+    .timeline-box {
+        width: 80%;
+        padding: 0;
     }
+}
+
+@media (max-width: 770px) {
+    .section-pro {
+        padding-top: 100px;
+    }
+    .description-career{
+        margin-bottom: 10%;
+    }
+    .section-pro {
+        padding: 100px 0 80px 0;
+    }
+    .footer {
+        gap : 300px;
+    }
+}
+
+@media (max-width: 430px) {
+    .section-pro {
+        padding: 80px 0 60px 0;
+    }
+    .titre-career {
+        font-size: 30px;
+    }
+    .description-career {
+        font-size: 12px;
+    }
+    .timeline {
+        gap: 15px;
+    }
+    .content {
+        padding: 10px 20px;
+    }
+    .content .poste {
+        font-size: 18px;
+    }
+    .content .date {
+        font-size: 8px;
+    }
+    .content .entreprise {
+        font-size: 14px;
+    }
+    .content p {
+        font-size: 12px;
+        margin-top: 15px;
+    }
+    .content ul {
+        font-size: 8px;
+    }
+    .skills-box {
+        gap: 10px 20px;
+    }
+    .skill-tag {
+        font-size: 8px;
+        padding: 4px 10px;
+    
+    }
+    .footer {
+        gap : 40px;
+    }
+    
 }
