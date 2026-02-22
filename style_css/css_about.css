@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 120px; 
+    height: calc(120px + env(safe-area-inset-top)); 
     z-index: 5;
     pointer-events: none; 
     backdrop-filter: blur(20px);
@@ -47,6 +47,7 @@
     padding-bottom: 10px;
 }
 
+/* Style CSS pour le contenu about */
 .boite-about {
     display: flex;
     flex-direction: column;
@@ -57,6 +58,7 @@
     margin: 0 auto;
 }
 
+/* Style CSS pour la box Prénom + Photo */
 .boite-titre-photo {
     display: flex;
     max-width: max-content;
@@ -82,6 +84,7 @@
     box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
+/* Style CSS pour la box Boutons + Langues */
 .boite-bouton {
     display: flex;
     flex-wrap: wrap;
@@ -105,11 +108,9 @@
     border: #202020 1px solid;
     border-radius: 30px;
     
-    /* On réduit encore le padding vertical à 0 */
     padding: 4px 12px; 
     gap: 5px;
     
-    /* On force une hauteur fixe très petite */
     height: 20px; 
     
     font-family: 'Inter', sans-serif;
@@ -117,7 +118,7 @@
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
-    line-height: 1; /* Très important pour supprimer l'espace du texte */
+    line-height: 1;
     
     transition: all 0.2s ease-in-out;
 }
@@ -129,9 +130,8 @@
 
 .icon-bouton {
     display: block;
-    height: 22px; /* L'icône doit être petite pour ne pas pousser les bords */
+    height: 22px; 
     width: auto;
-    /* On s'assure qu'aucune marge ne traîne */
     margin: 0;
 }
 
@@ -175,6 +175,7 @@
     opacity: 0.8;
 }
 
+/* Style CSS pour la box Texte à propos */
 .texte-about {
     margin-top: 50px;
     font-family: 'Inter', sans-serif;
@@ -183,9 +184,11 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.6;
-    text-align: center;
+    opacity: 0.8;
+    text-align: justify;
 }
 
+/* Style CSS pour la box Certifications et Diplôme */
 .certifs {
     display: flex;
     margin: 0 auto;
@@ -232,6 +235,7 @@
     height: 40px;
 }
 
+/* Style CSS pour la box Skills */
 .skills {   
     display: flex;
     flex-direction: column;
@@ -371,7 +375,7 @@
 
 /* Styles CSS pour gérer la responsivité */
 
-/* Pour les écrans de 1400px et moins */
+/* Pour les écrans de 1500px et moins */
 @media (max-width: 1500px) { 
     .certifs {
         width: 60%;
@@ -387,6 +391,7 @@
     }
 }
 
+/* Pour les écrans de 1150px et moins */
 @media (max-width: 1150px) { 
     .certifs {
         width: 80%;
@@ -412,6 +417,7 @@
     }
 }
 
+/* Pour les écrans de 900px et moins */
 @media (max-width: 900px) { 
     .boite-titre-photo {
         gap: 160px;
@@ -453,6 +459,7 @@
     }
 }
 
+/* Pour les écrans de 770px et moins */
 @media (max-width: 770px) {
     .boite-titre-photo {
         gap: 120px;
@@ -498,6 +505,7 @@
     }
 }
 
+/* Pour les écrans de 430px et moins */
 @media (max-width: 430px) {
     .boite-titre-photo {
         flex-direction: column-reverse;
