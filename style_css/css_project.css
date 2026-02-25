@@ -53,16 +53,26 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 150px 0 430px 0;
+    padding: 100px 0 100px 0;
     max-width: 100%;
 }
 .titre-project {
-    color: #ffffff;
-    font-size: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0;
 }
-.sous-titre-project {
+.description-project {
+    text-align: center;
     color: #ffffff;
-    font-size: 30px;
+    font-size: 14px;
+    max-width: 1000px;
+    margin: 50px auto 100px auto;
+    line-height: 1.5;
 }
 
 .Projets {
@@ -70,7 +80,7 @@
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     gap: 50px;
 }
 
@@ -78,7 +88,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 25%;
     font-family: 'Segoe UI', Roboto, sans-serif;
     border: #292929 1px solid;
@@ -130,7 +140,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 10px;
 
     margin-top: -100px; 
@@ -139,6 +149,7 @@
     padding: 20px 0;
   
     position: relative;
+    flex-grow: 1;
 }
 .nom_projet {
     color: #ffffff;
@@ -168,7 +179,7 @@
     width: 90%;
     text-align: justify;
     margin: 0;
-    padding: 10px 20px 0 20px;
+    padding: 10px 20px 10px 20px;
 }
 
 /* Style CSS pour les tags de compétences */
@@ -177,7 +188,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
-    margin: 20px 0 10px 0;
+    margin: auto 0 10px;
 }
 
 .skill-tag {
@@ -250,31 +261,113 @@
 
 /* Styles CSS pour gérer la responsivité */
 
-/* Pour les écrans de 1400px et moins */
+/* Pour les écrans de 1500px et moins */
 @media (max-width: 1500px) { 
-
+    .description-project {
+        max-width: 80%;
+        margin-bottom: 5%;
+    }
+    .Projets {
+        gap: 40px;
+    }
+    .projet{
+        width: 30%;
+    }
 }
 
+/* Pour les écrans de 1150px et moins */
 @media (max-width: 1150px) { 
-
+    .Projets {
+        gap: 50px;
+    }
+    .projet{
+        width: 40%;
+    }
 }
 
+/* Pour les écrans de 900px et moins */
 @media (max-width: 900px) { 
-
+    .Projets {
+        gap: 40px;
+    }
+    .projet{
+        width: 45%;
+    }
+    .bouton-github {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+    .bouton-demo {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
 }
 
+/* Pour les écrans de 770px et moins */
 @media (max-width: 770px) {
+    .description-project {
+        margin-bottom: 10%;
+    }
+    .Projets {
+        gap: 30px;
+    }
+    .projet{
+        width: 70%;
+    
+    }
+    .contenu_projet {
+        margin-top: -130px;
+    }
     .footer {
         gap : 300px;
     }
 }
 
+/* Pour les écrans de 540px et moins */
+@media (max-width: 540px){
+    .projet {
+        width: 80%;
+    }
+}    
+
+/* Pour les écrans de 430px et moins */
 @media (max-width: 430px){
+    .boite-project {
+        padding: 80px 0 60px 0;
+    }
     .titre-project {
         font-size: 30px;
     }
-    .sous-titre-project {
+    .description-project {
+        font-size: 12px;
+    }
+    .projet {
+        width: 90%;
+    }
+    .nom_projet {
         font-size: 20px;
+    }
+    .date_projet {
+        font-size: 8px;
+    }
+    .projet p {
+        font-size: 10px;
+    }
+        .skills-box {
+        gap: 10px 10px;
+    }
+    .skill-tag {
+        font-size: 8px;
+        padding: 4px 10px;
+    
+    }
+    .bouton-github {
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+    .bouton-demo {
+        padding: 8px 14px;
+        font-size: 12px;
     }
     .footer {
         gap : 40px;
