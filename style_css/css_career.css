@@ -292,9 +292,6 @@
 
 /* Pour les écrans de 770px et moins */
 @media (max-width: 770px) {
-    .section-pro {
-        padding-top: 100px;
-    }
     .description-career{
         margin-bottom: 10%;
     }
