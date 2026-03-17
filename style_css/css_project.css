@@ -182,6 +182,10 @@
     padding: 10px 20px 10px 20px;
 }
 
+.photo-stayout {
+    background: #ffffff;
+}
+
 /* Style CSS pour les tags de compétences */
 .skills-box {
     display: flex;
