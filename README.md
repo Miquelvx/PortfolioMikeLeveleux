@@ -4,14 +4,14 @@ Voici mon projet personnel de portfolio développé en HTML5, CSS3 et JavaScript
 Ce site a pour objectif de regrouper mes projets, mon parcours et mes compétences sur un support unique et accessible en ligne.
 
 ## Fonctionnalités
-    * Déploiement via GitHub Pages
-    * Design responsive (adapté mobile, tablette et desktop)
-    * Interface moderne et épurée
+- Déploiement via GitHub Pages
+- Design responsive (adapté mobile, tablette et desktop)
+- Interface moderne et épurée
 
 ## Contenu 
-    * Page Projets: Présentation de projets personnels et scolaires.
-    * Page Carrière: Timeline interactive de mes expériences professionnelles.
-    * Pages À propos: Page de présentation personnelle (diplôme, compétences technique,etc)
+- Page Projets: Présentation de projets personnels et scolaires.
+- Page Carrière: Timeline interactive de mes expériences professionnelles.
+- Pages À propos: Page de présentation personnelle (diplôme, compétences technique,etc)
 
 ## Structure du projet
 
