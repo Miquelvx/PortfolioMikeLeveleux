@@ -187,6 +187,11 @@
     background: #ffffff;
 }
 
+.photo-ohlebut {
+    height: 80%;
+    background: #ffffff;
+}
+
 /* Style CSS pour les tags de compétences */
 .skills-box {
     display: flex;
